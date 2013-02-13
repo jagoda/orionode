@@ -18,13 +18,16 @@ module.exports = {
         }
     
         var args = command.split(ARGUMENT_SEPARATOR),
-            command = args.shift();
+            command = args.shift(),
+            taskName = jake.currentNamespace.parentNamespace !== null ?
+                jake.currentNamespace.name  + ":" + name :
+                name;
             
         global.task(
             name,
             prerequisites,
             function () {
-                jake.logger.log("Starting external task '" + name + "'...");
+                jake.logger.log("Starting external task '" + taskName + "'...");
                 
                 // Using 'spawn' here to get good stdio inheritance.
                 var child = child_process.spawn(
