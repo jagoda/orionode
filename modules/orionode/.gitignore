@@ -5,6 +5,10 @@
 node_modules/
 npm-debug.log
 
+# Code coverage data
+cover_html
+.coverage_data
+
 # Per-user Orionode data
 .workspace/
 build/.temp/

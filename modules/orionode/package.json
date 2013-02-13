@@ -15,11 +15,14 @@
   "devDependencies": {
     "mocha": "*",
     "requirejs": "~2.1.2",
-    "supertest": "*"
+    "supertest": "*",
+    "cover": "~0.2.8",
+    "jake": "~0.5.8",
+    "jshint": "~0.9.1"
   },
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "jake test:unit"
   },
   "repository": {
     "type": "git",
