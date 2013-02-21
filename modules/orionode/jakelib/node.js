@@ -16,7 +16,7 @@ module.exports = {
             command = prerequisites;
             prerequisites = [];
         }
-        
+
         return shell.task(name, prerequisites, NODE + " " + command);
     }
 
