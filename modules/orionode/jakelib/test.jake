@@ -44,7 +44,7 @@ namespace("test", function () {
         "unit",
         // ./node_modules/.bin/mocha --reporter spec
         [
-            "./node_modules/.bin/mocha",
+            path.normalize("./node_modules/.bin/mocha"),
             "--reporter spec"
         ].join(" ")
     );
