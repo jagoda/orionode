@@ -23,7 +23,7 @@ module.exports = {
                 jake.currentNamespace.name  + ":" + name :
                 name;
             
-        global.task(
+        return global.task(
             name,
             prerequisites,
             function () {
